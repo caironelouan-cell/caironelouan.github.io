@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio d'Elouan CAIRON | Accueil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- BANDEAU DU HAUT (HEADER) -->
+    <header class="navbar">
+        <div class="nav-brand">Portfolio d'Elouan CAIRON</div>
+        
+        <nav class="nav-menu">
+            <!-- La classe "active" grise le bouton et désactive le clic -->
+            <a href="index.html" class="nav-btn active">Accueil</a>
+            <a href="parcours.html" class="nav-btn">Parcours académique</a>
+            <a href="experiences.html" class="nav-btn">Expériences pro</a>
+            <a href="projets.html" class="nav-btn">Projets techniques</a>
+            <a href="competences.html" class="nav-btn">Compétences</a>
+            <a href="interets.html" class="nav-btn">Centres d'intérêt</a>
+            <a href="contact.html" class="nav-btn">Contact</a>
+        </nav>
+
+        <!-- Menu déroulant Langue -->
+        <div class="lang-dropdown">
+            <button class="lang-btn" onclick="toggleLangMenu()">🌐 Langue ▾</button>
+            <div id="lang-menu" class="lang-content">
+                <a href="index.html" class="active-lang">🇫🇷 Français</a>
+                <a href="en/index.html">🇬🇧 English</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENU PRINCIPAL DE LA PAGE D'ACCUEIL -->
+    <main class="container">
+        
+        <!-- Section Présentation (Photo + Nom + Phrase) -->
+        <section class="intro-section">
+            <img src="img/photo-profil.jpg" alt="Photo d'Elouan CAIRON" class="profile-pic">
+            <h1>Elouan CAIRON</h1>
+            <p class="welcome-text">
+                Bienvenue sur le Portfolio d'Elouan CAIRON (Étudiant en Génie Mécanique et Productique) : projets, compétences, expériences professionnelles et parcours académique.
+            </p>
+        </section>
+
+        <!-- Section Vidéo de présentation -->
+        <section class="video-section">
+            <div class="video-wrapper">
+                <!-- "controls" permet de mettre en pause, régler le son et mettre en plein écran -->
+                <video controls preload="metadata">
+                    <source src="img/presentation.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la lecture de vidéos.
+                </video>
+            </div>
+        </section>
+
+        <!-- Grille des 6 rubriques (2 lignes de 3) -->
+        <section class="categories-section">
+            <div class="categories-grid">
+                
+                <!-- Carte 1 -->
+                <a href="parcours.html" class="category-card">
+                    <h2 class="card-title">Parcours académique</h2>
+                    <div class="card-image-wrapper">
+                        <img src="img/parcours.jpg" alt="Parcours académique">
+                    </div>
+                </a>
+
+                <!-- Carte 2 -->
+                <a href="experiences.html" class="category-card">
+                    <h2 class="card-title">Expériences professionnelles</h2>
+                    <div class="card-image-wrapper">
+                        <img src="img/experiences.jpg" alt="Expériences professionnelles">
+                    </div>
+                </a>
+
+                <!-- Carte 3 -->
+                <a href="projets.html" class="category-card">
+                    <h2 class="card-title">Projets techniques</h2>
+                    <div class="card-image-wrapper">
+                        <img src="img/projets.jpg" alt="Projets techniques">
+                    </div>
+                </a>
+
+                <!-- Carte 4 -->
+                <a href="competences.html" class="category-card">
+                    <h2 class="card-title">Compétences</h2>
+                    <div class="card-image-wrapper">
+                        <img src="img/competences.jpg" alt="Compétences">
+                    </div>
+                </a>
+
+                <!-- Carte 5 -->
+                <a href="interets.html" class="category-card">
+                    <h2 class="card-title">Centres d'intérêt</h2>
+                    <div class="card-image-wrapper">
+                        <img src="img/interets.jpg" alt="Centres d'intérêt">
+                    </div>
+                </a>
+
+                <!-- Carte 6 -->
+                <a href="contact.html" class="category-card">
+                    <h2 class="card-title">Contact</h2>
+                    <div class="card-image-wrapper">
+                        <img src="img/contact.jpg" alt="Contact">
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BANDEAU DU BAS (FOOTER) -->
+    <footer class="footer">
+        <div class="footer-content">
+            <span>📧 Email : <a href="mailto:prenom.nom@email.com">prenom.nom@email.com</a></span>
+            <span class="separator">|</span>
+            <span>🔗 <a href="https://www.linkedin.com/in/ton-profil" target="_blank" rel="noopener noreferrer">Mon Profil LinkedIn</a></span>
+        </div>
+        <p class="copyright">© 2026 Elouan CAIRON - Tous droits réservés.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
