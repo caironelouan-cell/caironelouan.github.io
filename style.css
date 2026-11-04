@@ -1,4 +1,4 @@
-/* --- BASE & COULEURS (Thème clair et épuré blanc/gris) --- */
+/* --- BASE & COULEURS (Fond bleu clair & écriture noire) --- */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-color: #f4f5f7; /* Gris très clair en fond */
-    color: #2c333a; /* Gris anthracite très lisible */
+    background-color: #dbeafe; /* Bleu clair lumineux */
+    color: #000000; /* Écriture noire sur le fond */
     line-height: 1.6;
     display: flex;
     flex-direction: column;
@@ -17,8 +17,8 @@ body {
 
 /* --- BANDEAU DU HAUT (NAVBAR) --- */
 .navbar {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e1e4e8;
+    background-color: #eff6ff; /* Bleu très pâle pour détacher le bandeau */
+    border-bottom: 2px solid #bfdbfe;
     padding: 0.8rem 2rem;
     display: flex;
     justify-content: space-between;
@@ -26,7 +26,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     flex-wrap: wrap;
     gap: 1rem;
 }
@@ -34,7 +34,7 @@ body {
 .nav-brand {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #1f2428;
+    color: #000000;
     white-space: nowrap;
 }
 
@@ -45,31 +45,31 @@ body {
     justify-content: center;
 }
 
+/* Boutons du menu : Bleu foncé et écriture blanche */
 .nav-btn {
     text-decoration: none;
-    color: #3b4248;
-    background-color: #f0f2f5;
+    color: #ffffff;
+    background-color: #1e3a8a; /* Bleu foncé */
     padding: 0.5rem 0.85rem;
     border-radius: 6px;
     font-size: 0.9rem;
     font-weight: 500;
     transition: all 0.2s ease;
-    border: 1px solid transparent;
+    border: 1px solid #172554;
 }
 
 .nav-btn:hover {
-    background-color: #e2e6ea;
-    color: #000000;
-    border-color: #cbd2d9;
+    background-color: #2563eb; /* Bleu un peu plus vif au survol */
+    color: #ffffff;
 }
 
-/* Bouton de la page active : grisé et non cliquable */
+/* Bouton de la page active : reste grisé et non cliquable */
 .nav-btn.active {
-    background-color: #d1d5da;
-    color: #767d84;
-    pointer-events: none; /* Empêche le clic */
+    background-color: #cbd5e1;
+    color: #475569;
+    pointer-events: none;
     cursor: default;
-    border-color: #c4c9cf;
+    border-color: #94a3b8;
 }
 
 /* --- BOUTON LANGUE DÉROULANT --- */
@@ -79,9 +79,9 @@ body {
 }
 
 .lang-btn {
-    background-color: #ffffff;
-    color: #2c333a;
-    border: 1px solid #d1d5da;
+    background-color: #1e3a8a; /* Bleu foncé */
+    color: #ffffff; /* Écriture blanche */
+    border: 1px solid #172554;
     padding: 0.5rem 0.9rem;
     font-size: 0.9rem;
     font-weight: 500;
@@ -91,7 +91,7 @@ body {
 }
 
 .lang-btn:hover {
-    background-color: #f0f2f5;
+    background-color: #2563eb;
 }
 
 .lang-content {
@@ -99,10 +99,10 @@ body {
     position: absolute;
     right: 0;
     margin-top: 0.4rem;
-    background-color: #ffffff;
+    background-color: #1e3a8a;
     min-width: 140px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e1e4e8;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 1px solid #172554;
     border-radius: 6px;
     overflow: hidden;
     z-index: 1001;
@@ -113,7 +113,7 @@ body {
 }
 
 .lang-content a {
-    color: #2c333a;
+    color: #ffffff;
     padding: 0.65rem 1rem;
     text-decoration: none;
     display: block;
@@ -121,12 +121,12 @@ body {
 }
 
 .lang-content a:hover {
-    background-color: #f4f5f7;
+    background-color: #2563eb;
 }
 
 .lang-content a.active-lang {
-    font-weight: 600;
-    background-color: #eef1f4;
+    font-weight: 700;
+    background-color: #172554;
 }
 
 /* --- CONTENEUR PRINCIPAL --- */
@@ -137,15 +137,10 @@ body {
     flex: 1;
 }
 
-/* --- SECTION PRÉSENTATION --- */
+/* --- SECTION PRÉSENTATION (Sur le fond bleu clair avec texte noir) --- */
 .intro-section {
     text-align: center;
-    background-color: #ffffff;
-    padding: 2.5rem 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    border: 1px solid #e8eaed;
-    margin-bottom: 2.5rem;
+    padding: 1.5rem 1rem 2.5rem 1rem;
 }
 
 .profile-pic {
@@ -153,21 +148,22 @@ body {
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #e1e4e8;
+    border: 4px solid #1e3a8a; /* Bordure bleu foncé autour de ta photo */
     margin-bottom: 1rem;
-    background-color: #eaecef;
+    background-color: #ffffff;
 }
 
 .intro-section h1 {
-    font-size: 2.2rem;
-    color: #1f2428;
+    font-size: 2.3rem;
+    color: #000000;
     margin-bottom: 0.8rem;
     letter-spacing: 0.5px;
 }
 
 .welcome-text {
-    font-size: 1.1rem;
-    color: #586069;
+    font-size: 1.15rem;
+    color: #000000;
+    font-weight: 500;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -180,11 +176,11 @@ body {
 .video-wrapper {
     max-width: 750px;
     margin: 0 auto;
-    background-color: #000;
+    background-color: #000000;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-    border: 1px solid #d1d5da;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    border: 3px solid #1e3a8a;
 }
 
 .video-wrapper video {
@@ -193,22 +189,22 @@ body {
     max-height: 450px;
 }
 
-/* --- GRILLE DES 6 ONGLETS (2 lignes de 3) --- */
+/* --- GRILLE DES 6 ONGLETS (Bleu foncé & écriture blanche) --- */
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Force 3 colonnes */
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
 }
 
 .category-card {
-    background-color: #ffffff;
-    border: 1px solid #e1e4e8;
+    background-color: #1e3a8a; /* Bleu foncé */
+    border: 2px solid #172554;
     border-radius: 10px;
     padding: 1.2rem;
     text-decoration: none;
-    color: #1f2428;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    color: #ffffff; /* Écriture blanche */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -216,16 +212,16 @@ body {
 
 .category-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
-    border-color: #b8bfc6;
+    background-color: #2563eb; /* S'éclaircit légèrement au survol */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .card-title {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: 600;
     text-align: center;
     margin-bottom: 1rem;
-    color: #2c333a;
+    color: #ffffff; /* Titre bien blanc */
 }
 
 .card-image-wrapper {
@@ -233,7 +229,7 @@ body {
     height: 190px;
     border-radius: 6px;
     overflow: hidden;
-    background-color: #eaecef;
+    background-color: #eff6ff;
 }
 
 .card-image-wrapper img {
@@ -249,11 +245,11 @@ body {
 
 /* --- BANDEAU DU BAS (FOOTER) --- */
 .footer {
-    background-color: #ffffff;
-    border-top: 1px solid #e1e4e8;
+    background-color: #eff6ff;
+    border-top: 2px solid #bfdbfe;
     padding: 1.5rem 2rem;
     text-align: center;
-    color: #586069;
+    color: #000000;
     font-size: 0.95rem;
     margin-top: auto;
 }
@@ -263,8 +259,8 @@ body {
 }
 
 .footer a {
-    color: #2c333a;
-    font-weight: 600;
+    color: #1e3a8a;
+    font-weight: 700;
     text-decoration: none;
 }
 
@@ -274,18 +270,18 @@ body {
 
 .separator {
     margin: 0 1rem;
-    color: #d1d5da;
+    color: #93c5fd;
 }
 
 .copyright {
-    font-size: 0.8rem;
-    color: #8b949e;
+    font-size: 0.85rem;
+    color: #000000;
 }
 
 /* --- ADAPTATION ÉCRANS MOYENS & MOBILES --- */
 @media (max-width: 900px) {
     .categories-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
+        grid-template-columns: repeat(2, 1fr);
     }
     .navbar {
         justify-content: center;
@@ -294,6 +290,6 @@ body {
 
 @media (max-width: 600px) {
     .categories-grid {
-        grid-template-columns: 1fr; /* 1 colonne sur téléphone */
+        grid-template-columns: 1fr;
     }
 }
