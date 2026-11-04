@@ -1,0 +1,299 @@
+/* --- BASE & COULEURS (Thème clair et épuré blanc/gris) --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f5f7; /* Gris très clair en fond */
+    color: #2c333a; /* Gris anthracite très lisible */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* --- BANDEAU DU HAUT (NAVBAR) --- */
+.navbar {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e1e4e8;
+    padding: 0.8rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.nav-brand {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1f2428;
+    white-space: nowrap;
+}
+
+.nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: center;
+}
+
+.nav-btn {
+    text-decoration: none;
+    color: #3b4248;
+    background-color: #f0f2f5;
+    padding: 0.5rem 0.85rem;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.nav-btn:hover {
+    background-color: #e2e6ea;
+    color: #000000;
+    border-color: #cbd2d9;
+}
+
+/* Bouton de la page active : grisé et non cliquable */
+.nav-btn.active {
+    background-color: #d1d5da;
+    color: #767d84;
+    pointer-events: none; /* Empêche le clic */
+    cursor: default;
+    border-color: #c4c9cf;
+}
+
+/* --- BOUTON LANGUE DÉROULANT --- */
+.lang-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.lang-btn {
+    background-color: #ffffff;
+    color: #2c333a;
+    border: 1px solid #d1d5da;
+    padding: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.lang-btn:hover {
+    background-color: #f0f2f5;
+}
+
+.lang-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    margin-top: 0.4rem;
+    background-color: #ffffff;
+    min-width: 140px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.lang-content.show {
+    display: block;
+}
+
+.lang-content a {
+    color: #2c333a;
+    padding: 0.65rem 1rem;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.lang-content a:hover {
+    background-color: #f4f5f7;
+}
+
+.lang-content a.active-lang {
+    font-weight: 600;
+    background-color: #eef1f4;
+}
+
+/* --- CONTENEUR PRINCIPAL --- */
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+    flex: 1;
+}
+
+/* --- SECTION PRÉSENTATION --- */
+.intro-section {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 2.5rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e8eaed;
+    margin-bottom: 2.5rem;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #e1e4e8;
+    margin-bottom: 1rem;
+    background-color: #eaecef;
+}
+
+.intro-section h1 {
+    font-size: 2.2rem;
+    color: #1f2428;
+    margin-bottom: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.welcome-text {
+    font-size: 1.1rem;
+    color: #586069;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* --- SECTION VIDÉO --- */
+.video-section {
+    margin-bottom: 3rem;
+}
+
+.video-wrapper {
+    max-width: 750px;
+    margin: 0 auto;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    border: 1px solid #d1d5da;
+}
+
+.video-wrapper video {
+    width: 100%;
+    display: block;
+    max-height: 450px;
+}
+
+/* --- GRILLE DES 6 ONGLETS (2 lignes de 3) --- */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Force 3 colonnes */
+    gap: 2rem;
+}
+
+.category-card {
+    background-color: #ffffff;
+    border: 1px solid #e1e4e8;
+    border-radius: 10px;
+    padding: 1.2rem;
+    text-decoration: none;
+    color: #1f2428;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    border-color: #b8bfc6;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #2c333a;
+}
+
+.card-image-wrapper {
+    width: 100%;
+    height: 190px;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #eaecef;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+}
+
+/* --- BANDEAU DU BAS (FOOTER) --- */
+.footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e1e4e8;
+    padding: 1.5rem 2rem;
+    text-align: center;
+    color: #586069;
+    font-size: 0.95rem;
+    margin-top: auto;
+}
+
+.footer-content {
+    margin-bottom: 0.5rem;
+}
+
+.footer a {
+    color: #2c333a;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    margin: 0 1rem;
+    color: #d1d5da;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: #8b949e;
+}
+
+/* --- ADAPTATION ÉCRANS MOYENS & MOBILES --- */
+@media (max-width: 900px) {
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
+    }
+    .navbar {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .categories-grid {
+        grid-template-columns: 1fr; /* 1 colonne sur téléphone */
+    }
+}
